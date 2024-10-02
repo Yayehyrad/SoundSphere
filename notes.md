@@ -1,0 +1,1 @@
+start always with scafold and a safe area 
