@@ -31,7 +31,8 @@ class GetStarted extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
                 color: Colors.white
-              ),)
+              ),),
+              SizedBox()
               ],
             ),
            ),
