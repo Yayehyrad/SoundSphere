@@ -25,7 +25,17 @@ class GetStarted extends StatelessWidget {
                 )
               )
             ),
-            child: Column(
+            
+           ),
+           Container(
+            color : Colors.black.withOpacity(0.2)
+           ) , 
+           Padding(
+            padding: EdgeInsets.symmetric(
+            horizontal: 40,
+            vertical: 50
+           ),
+           child: Column(
               children: [
                  Align(
                   alignment: Alignment.center,
@@ -47,14 +57,11 @@ class GetStarted extends StatelessWidget {
               ),textAlign: TextAlign.center,),
               const SizedBox(height: 21,),
               BasicAppBtn(onPressed: (){
-                 
-                Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=>ChooseMode()));
+                print("hi there");
+                Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=> ChooseMode()));
               }, title: "Get started" , height:70)
               ],
             ),
-           ),
-           Container(
-            color : Colors.black.withOpacity(0.2)
            )
         ]
       )
