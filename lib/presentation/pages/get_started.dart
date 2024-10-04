@@ -39,10 +39,12 @@ class GetStarted extends StatelessWidget {
               children: [
                  Align(
                   alignment: Alignment.center,
-                  child: Image.asset(
+                  child: Hero(tag: 'logo', child: 
+                  
+                  Image.asset(
                     AppAssets.logo
                   ),
-                 ),
+                 ),),
               const Spacer(),
               const Text("Enjoy Listning To Music" , style: TextStyle(
                 fontWeight: FontWeight.bold,
