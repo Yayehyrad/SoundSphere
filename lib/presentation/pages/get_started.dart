@@ -3,6 +3,7 @@ import 'package:soundsphere/common/widgets/button/basic_app_btn.dart';
 import 'package:soundsphere/core/configs/assets/app_assets.dart';
 import 'package:soundsphere/core/configs/themes/app_color.dart';
 import 'package:soundsphere/presentation/pages/choose_mode.dart';
+import 'package:soundsphere/presentation/pages/signin_up.dart';
 
 class GetStarted extends StatelessWidget {
   const GetStarted({super.key});
@@ -60,7 +61,7 @@ class GetStarted extends StatelessWidget {
               const SizedBox(height: 21,),
               BasicAppBtn(onPressed: (){
                 print("hi there");
-                Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=> ChooseMode()));
+                Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)=> const SigninUp()));
               }, title: "Get started" , height:70)
               ],
             ),
