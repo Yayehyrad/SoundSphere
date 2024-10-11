@@ -1,9 +1,13 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:soundsphere/common/widgets/button/basic_app_btn.dart';
 import 'package:soundsphere/core/configs/assets/app_assets.dart';
+import 'package:soundsphere/main.dart';
+import 'package:soundsphere/presentation/bloc/theme-cubit.dart';
+import 'package:soundsphere/presentation/pages/signin_up.dart';
 
 class ChooseMode extends StatelessWidget {
   const ChooseMode({super.key});
@@ -56,7 +60,9 @@ class ChooseMode extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 42),
-          BasicAppBtn(onPressed: (){}, title:"Choose Mode" , height: 70 )
+          BasicAppBtn(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=> SigninUp() ));
+          }, title:"Choose Mode" , height: 70 )
         ],
       ),
       )
@@ -83,7 +89,9 @@ class BtnChoose extends StatelessWidget {
               BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 10 , sigmaY: 10) , 
               child: 
-              FloatingActionButton(onPressed: (){} , 
+              FloatingActionButton(onPressed: (){
+                context.read<ThemeCubit>().updateTheme(text == "light" ? ThemeMode.light : ThemeMode.dark);
+              } , 
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)) , 
               child: SvgPicture.asset(svg),
               backgroundColor: Colors.black.withOpacity(opacity),
