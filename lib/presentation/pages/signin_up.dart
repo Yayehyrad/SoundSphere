@@ -5,6 +5,7 @@ import 'package:soundsphere/common/widgets/appbar/basic_app_bar.dart';
 import 'package:soundsphere/common/widgets/button/basic_app_btn.dart';
 import 'package:soundsphere/core/configs/assets/app_assets.dart';
 import 'package:soundsphere/core/configs/themes/app_color.dart';
+import 'package:soundsphere/presentation/pages/signup.dart';
 
 class SigninUp extends StatelessWidget {
   const SigninUp({super.key});
@@ -49,7 +50,9 @@ class SigninUp extends StatelessWidget {
                    const SizedBox(height: 30,) ,
                    Row(
                     children: [
-                      Expanded( flex:1 , child:  BasicAppBtn(onPressed: (){} , title: 'signup')),
+                      Expanded( flex:1 , child:  BasicAppBtn(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=>Signup()));
+                      } , title: 'signup')),
                       const SizedBox(height: 20,),
                       Expanded(flex:1 , child: 
                       TextButton(onPressed: (){}, child: Text("signin" ,style: TextStyle(

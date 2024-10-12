@@ -2,14 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:soundsphere/common/helper/isDark.dart';
 import 'package:soundsphere/presentation/pages/signin_up.dart';
 
-class BasicAppBar extends StatelessWidget {
-  const BasicAppBar({super.key});
+class BasicAppBar extends StatelessWidget implements PreferredSize{
+  const BasicAppBar({super.key , this.text });
+  
+  final Widget ? text ;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
+      title: text ?? const Text("") ,
+      centerTitle: true,
       leading: IconButton(onPressed: (){
         Navigator.pop(context);
       }, icon: Container(
@@ -29,4 +33,12 @@ class BasicAppBar extends StatelessWidget {
       ,
     );
   }
+  
+  @override
+  // TODO: implement child
+  Widget get child => throw UnimplementedError();
+  
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
