@@ -17,4 +17,15 @@ class Signup extends StatelessWidget {
       ),
     );
   }
+
+  Widget _registerText(){
+    return Text("Register" , style:TextStyle(
+      fontWeight : FontWeight.bold,
+      fontSize : 26
+    ) , textAlign  : TextAlign.center);
+  }
+
+  Widget _fullNameField(){
+    return TextField();
+  }
 }
