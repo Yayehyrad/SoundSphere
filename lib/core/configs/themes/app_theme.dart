@@ -7,6 +7,25 @@ class AppTheme {
     scaffoldBackgroundColor: AppColor.lightBG,
     brightness: Brightness.light,
     fontFamily: 'FiraSans',
+    inputDecorationTheme: InputDecorationTheme(
+        filled : true ,
+        fillColor : Colors.transparent ,
+        contentPadding : EdgeInsets.all(30),
+        enabledBorder : OutlineInputBorder(
+          borderRadius : BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: Colors.white,
+            width: 0.4
+          )
+        ) ,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: Colors.white,
+            width: 0.4
+          )
+        )
+      ) ,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.primary,
@@ -25,6 +44,25 @@ class AppTheme {
     brightness: Brightness.dark,
     scaffoldBackgroundColor: AppColor.darkBG,
     fontFamily: 'FiraSans',
+    inputDecorationTheme: InputDecorationTheme(
+        filled : true ,
+        fillColor : Colors.transparent ,
+        contentPadding : EdgeInsets.all(30),
+        enabledBorder : OutlineInputBorder(
+          borderRadius : BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: Colors.black,
+            width: 0.4
+          )
+        ) ,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(30),
+          borderSide: const BorderSide(
+            color: Colors.black,
+            width: 0.4
+          )
+        )
+      ) ,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColor.primary,
