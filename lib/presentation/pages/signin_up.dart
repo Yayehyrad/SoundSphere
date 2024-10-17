@@ -5,6 +5,7 @@ import 'package:soundsphere/common/widgets/appbar/basic_app_bar.dart';
 import 'package:soundsphere/common/widgets/button/basic_app_btn.dart';
 import 'package:soundsphere/core/configs/assets/app_assets.dart';
 import 'package:soundsphere/core/configs/themes/app_color.dart';
+import 'package:soundsphere/presentation/pages/signin.dart';
 import 'package:soundsphere/presentation/pages/signup.dart';
 
 class SigninUp extends StatelessWidget {
@@ -55,7 +56,11 @@ class SigninUp extends StatelessWidget {
                       } , title: 'signup')),
                       const SizedBox(height: 20,),
                       Expanded(flex:1 , child: 
-                      TextButton(onPressed: (){}, child: Text("signin" ,style: TextStyle(
+                      TextButton(onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: 
+                        (BuildContext context)=>Signin()
+                        ));
+                      }, child: Text("signin" ,style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16 ,
                         color:  context.isDark() ? Colors.white : Colors.black
