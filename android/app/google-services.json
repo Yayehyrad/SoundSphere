@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "236357464694",
+    "project_id": "soundsphere-1b8aa",
+    "storage_bucket": "soundsphere-1b8aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236357464694:android:8e0eada2e1d80106892557",
+        "android_client_info": {
+          "package_name": "com.android.application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAaFrcHk5n9KLVbh8affwbCCndPIAu158"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
